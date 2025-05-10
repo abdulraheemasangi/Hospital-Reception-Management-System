@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0077b6;
+  color: white;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size:20px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffdd00;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Landing Page Styling */
+.landing-page {
+  max-width:100%;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+  color: #005a87;
+  margin-bottom: 15px;
+}
+
+.intro-section p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #005a87;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0077b6;
+}
+
+.features-section {
+  margin-top: 40px;
+}
+
+.features-section h2 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.features-section ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 2;
+  font-size: 1rem;
+}
+
+
+.footer-note {
+  text-align: center;
+  margin-top: 60px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+
+/* Patient Detail Container */
+.detail-container {
+  background-color: #f4f7fa; /* Light background color for contrast */
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.detail-container h2 {
+  text-align: center;
+  color: #0077b6; /* Calm blue color for heading */
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Patient Info Section */
+.patient-info {
+  display: flex;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Label Styling */
+.patient-info .label {
+  font-weight: bold;
+  color: #333;
+  width: 200px; /* Fixed width for labels */
+  margin-right: 20px; /* Space between label and value */
+}
+
+/* Value Styling */
+.patient-info .value {
+  color: #555;
+  flex-grow: 1;
+  word-wrap: break-word;
+}
+
+/* Button Section */
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.button-container .btn {
+  background-color: #0077b6; /* Matching color with the heading */
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.button-container .btn:hover {
+  background-color: #005f8d; /* Slightly darker shade on hover */
+}
+
+
+/* Registration Container */
+.registration-container {
+  background-color: #f9f9f9; /* Light background color */
+  padding: 2rem;
+  max-width: 600px;
+  margin: 3rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.registration-container h2 {
+  text-align: center;
+  color: #0077b6; /* Calm blue color for heading */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Label Styling */
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #0077b6; /* Focus color to match the theme */
+}
+
+/* Textarea Styling */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Button Styling */
+button.btn {
+  background-color: #0077b6; /* Button background */
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+button.btn:hover {
+  background-color: #005f8d; /* Darker shade on hover */
+}
+
+
+/* Search Container */
+.search-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  width:800px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-container input[type="text"]:focus {
+
+  border-color: #0077b6; 
+  
+}
+
+.search-container input[type="submit"] {
+  background-color: #0077b6;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100px;
+  transition: background-color 0.3s;
+}
+
+.search-container input[type="submit"]:hover {
+  background-color: #005f8d; /* Darker shade on hover */
+}
+
+/* Patient List Container */
+.list_container {
+  margin: 3rem auto;
+  max-width: 1000px;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.list_container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 2rem;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table th, table td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+table th {
+  background-color: #0077b6;
+  color: white;
+  font-size: 1rem;
+}
+
+table td {
+  background-color: #f9f9f9;
+  font-size: 0.9rem;
+}
+
+/* Buttons in the Table */
+.btn {
+  background-color: #0077b6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #005f8d; /* Darker shade on hover */
+}
+
+/* No results message */
+.no-result {
+  text-align: center;
+  color: #f44336;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}

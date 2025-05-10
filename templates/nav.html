@@ -1,0 +1,24 @@
+{% block content %}
+
+<nav class="navbar">
+  <div class="logo">Hospital Reception</div>
+
+  <div class="menu-toggle">☰</div> 
+
+  <ul class="nav-links">
+    {% if request.user.is_authenticated %}
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'patient_register' %}">Patient Register</a></li>
+      <li><a href="{% url 'patient_list' %}">Patients list</a></li>
+      <li><a href="{% url 'profile' %}">Profile</a></li>
+      <li><a href="{% url 'logout_' %}">Logout</a></li>
+    {% else %}
+      <li><a href="{% url 'login_' %}">Login</a></li>
+      <li><a href="{% url 'register_' %}">Register</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+    {% endif %}
+  </ul>
+</nav>
+
+
+{% endblock content %}

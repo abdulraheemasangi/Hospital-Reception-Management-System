@@ -1,0 +1,69 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<!-- {{ data.full_name }}
+{{ data.phone_number }}
+{{ data.address }}
+{{ data.age }}
+{{ data.gender }}
+{{ data.state }}
+{{ data.aadhaar_number }}
+{{ data.email }}
+{{ data.health_problem }}
+{{ data.date_of_visit }} -->
+
+
+<div class="detail-container">
+    <h2>Patient Details</h2>
+    <div class="patient-info">
+        <span class="label">Full Name:</span>
+        <span class="value">{{ data.full_name }}</span>
+    </div>
+    <div class="patient-info">
+        <span class="label">Phone Number:</span>
+        <span class="value">{{ data.phone_number }}</span>
+    </div>
+    <div class="patient-info">
+        <span class="label">Address:</span>
+        <span class="value">{{ data.address }}</span>
+    </div>
+    <div class="patient-info">
+        <span class="label">Age:</span>
+        <span class="value">{{ data.age }}</span>
+    </div>
+    <div class="patient-info">
+        <span class="label">Gender:</span>
+        <span class="value">{{ data.gender }}</span>
+    </div>
+    <div class="patient-info">
+        <span class="label">State:</span>
+        <span class="value">{{ data.state }}</span>
+    </div>
+    <div class="patient-info">
+        <span class="label">Aadhaar Number:</span>
+        <span class="value">{{ data.aadhaar_number }}</span>
+    </div>
+    <div class="patient-info">
+        <span class="label">Email:</span>
+        <span class="value">{{ data.email }}</span>
+    </div>
+    <div class="patient-info">
+        <span class="label">Health Problem:</span>
+        <span class="value">{{ data.health_problem }}</span>
+    </div>
+    <div class="patient-info">
+        <span class="label">Date of Visit:</span>
+        <span class="value">{{ data.date_of_visit }}</span>
+    </div>
+
+    <!-- Button Section -->
+    <div class="button-container">
+        <a href="{% url 'home' %}" class="btn">Back to Home</a>
+        <a href="{% url 'patient_register' %}" class="btn">Go to Register</a>
+        <a href="{% url 'patient_list' %}" class="btn">Go to Patient List</a>
+    </div>
+</div>
+
+
+{% endblock content %}

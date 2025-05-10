@@ -1,0 +1,97 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="search-container">
+
+    <form action="">
+
+        
+        <input type="text" placeholder="Search by using Fullname, phone number, Email, Age, Gender, health Problem !" name="querry">
+        
+        <input type="submit" value="search" >
+
+    </form>
+    
+
+</div>
+
+<div class="list_container">
+
+    <h2>Patient Records</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Full Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Health Issue</th>
+                <th>Actions</th>
+            </tr>
+
+        </thead>
+
+{% if request.GET.querry %}
+        <tbody>
+
+            {% for patient in search %}
+            <tr>
+
+                <td>{{ patient.full_name }}</td>
+                <td>{{ patient.phone_number }}</td>
+                <td>{{ patient.email }}</td>
+                <td>{{ patient.age }}</td>
+                <td>{{ patient.gender }}</td>
+                <td>{{ patient.health_problem }}</td>
+                <td>
+                   
+                    <a href="{% url 'patient_details' patient.id %}" class="btn">More Details</a>
+                    <a href="{% url 'patient_list'%}" class="btn">Back to List</a>
+
+                </td>
+                
+            </tr>
+            
+            {% empty %}
+                 <p class="no-result">No Matching Patient found...!</p>
+            {% endfor %}
+            
+        </tbody>
+{% else %}
+        <tbody>
+
+            {% for patient in data %}
+            <tr>
+
+                <td>{{ patient.full_name }}</td>
+                <td>{{ patient.phone_number }}</td>
+                <td>{{ patient.email }}</td>
+                <td>{{ patient.age }}</td>
+                <td>{{ patient.gender }}</td>
+                <td>{{ patient.health_problem }}</td>
+                <td>
+                   
+                    <a href="{% url 'patient_details' patient.id %}" class="btn">More Details</a>
+
+                </td>
+                
+            </tr>
+            
+            {% endfor %}
+            
+        </tbody>
+{% endif %}
+        
+    </table>
+    
+</div>
+
+
+
+
+{% endblock content %}

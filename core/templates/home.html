@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div class="landing-page">
+
+    <div class="intro-section">
+        <h1>Welcome to Hospital Reception Management</h1>
+        <p>A modern, efficient solution designed to simplify and enhance front-desk hospital operations.</p>
+        <p>Effortlessly register patients, maintain accurate records, and manage workflows—all from a single platform.</p>
+        <a href="{% url 'patient_register' %}" class="cta-button">Register a New Patient</a>
+    </div>
+
+    <div class="features-section">
+        <h2>Core Features</h2>
+        <ul>
+            <li>🔹 Clean, user-friendly interface built for receptionists</li>
+            <li>🔹 Fast and accurate patient search and record management</li>
+            <li>🔹 Robust authentication with personalized user profiles</li>
+            <li>🔹 Seamless access across all modern browsers and devices</li>
+        </ul>
+    </div>
+
+    <div class="footer-note">
+        <p>&copy; 2025 Abdul Raheem. All rights reserved.</p>
+    </div>
+
+</div>
+{% endblock content %}

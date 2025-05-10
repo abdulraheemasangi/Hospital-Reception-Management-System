@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'sytles.css' %}">
+    <link rel="stylesheet" href="{% static 'responsive.css' %}">
+    <title>Hospital-Management</title>
+</head>
+<body>
+
+    <!-- admin@123
+    123 -->
+
+    {% include 'nav.html' %}
+
+    {% block content %}
+
+
+
+
+    {% endblock content %}
+
+
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (toggleBtn && navLinks) {
+      toggleBtn.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+      });
+    }
+  });
+</script>
+
+
+</body>
+</html>
