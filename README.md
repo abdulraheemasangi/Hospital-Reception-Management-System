@@ -40,7 +40,8 @@ python manage.py runserver
 * Python
 * Django
 * HTML/CSS
-
+* SQLITE
+ 
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request.
